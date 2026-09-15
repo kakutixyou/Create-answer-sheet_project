@@ -1,0 +1,60 @@
+/**
+ * QuestionBlock スタイル
+ * 問題ブロックのスタイルと削除ボタン
+ */
+
+.question-block {
+  position: relative;
+}
+
+.question-block.minor-question {
+  padding-left: 0;
+}
+
+.question-block.major-question {
+  padding-left: 0;
+  margin-bottom: 16px;
+  padding-top: 12px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.major-title {
+  margin-bottom: 12px;
+}
+
+.major-title h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.question-content {
+  margin-left: 16px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 8px;
+  font-size: 11px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
+
+@media print {
+  .delete-btn,
+  .edit-panel {
+    display: none;
+  }
+}

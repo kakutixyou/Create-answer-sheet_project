@@ -1,0 +1,72 @@
+/**
+ * 記述問題スタイル
+ * マス目・長い枠の配置と装飾
+ */
+
+.description-question {
+  margin-bottom: 12px;
+}
+
+.answer-area {
+  display: flex;
+  align-items: center;
+}
+
+.grid-container {
+  display: flex;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+
+.description-grid-box {
+  border: 1px solid #111827;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: white;
+}
+
+.description-grid-box:not(:last-child) {
+  border-right: none;
+}
+
+.inner-number {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: 9px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.long-box-container {
+  display: flex;
+  align-items: center;
+}
+
+.description-long-box {
+  border-bottom: 2px solid #111827;
+  background-color: white;
+}
+
+.edit-panel {
+  margin-top: 12px;
+  padding: 8px;
+  background-color: #fff0f0;
+  border-left: 2px solid #ef4444;
+  font-size: 12px;
+}
+
+.edit-panel label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.edit-panel input {
+  padding: 3px 6px;
+  font-size: 12px;
+}

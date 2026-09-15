@@ -1,0 +1,17 @@
+/**
+ * ページスタイル
+ */
+
+.page-container {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+@media print {
+  .page-container {
+    box-shadow: none;
+    page-break-after: always;
+  }
+}

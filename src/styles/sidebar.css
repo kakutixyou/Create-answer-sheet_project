@@ -1,0 +1,29 @@
+/**
+ * サイドバースタイル
+ */
+
+.sidebar {
+  background-color: #f3f4f6;
+  border-right: 1px solid #d1d5db;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  color: #111827;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+@media print {
+  .sidebar {
+    display: none;
+  }
+}

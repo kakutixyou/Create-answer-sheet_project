@@ -1,0 +1,68 @@
+/**
+ * 記号問題スタイル
+ * 選択肢ボックスの配置と装飾
+ */
+
+.symbol-question {
+  margin-bottom: 12px;
+}
+
+.question-header {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 8px;
+  gap: 6px;
+}
+
+.question-number {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  min-width: 20px;
+}
+
+.choices-container {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.symbol-choice-box {
+  border: 2px solid #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  background-color: white;
+}
+
+.choice-number {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: 9px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.edit-panel {
+  margin-top: 12px;
+  padding: 8px;
+  background-color: #f0f4ff;
+  border-left: 2px solid #3b82f6;
+  font-size: 12px;
+}
+
+.edit-panel label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.edit-panel input {
+  padding: 3px 6px;
+  font-size: 12px;
+}

@@ -1,0 +1,96 @@
+/**
+ * 用紙スタイル
+ * B4, A4, B5 用紙のサイズと2段組みレイアウト
+ */
+
+.page-container {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* B4 用紙: 257mm x 364mm → px換算 */
+.paper-b4 .page-container {
+  width: 972px;
+  /* (257mm × 3.78) */
+  height: 1378px;
+  /* (364mm × 3.78) */
+  margin: 0 auto;
+}
+
+/* A4 用紙: 210mm x 297mm */
+.paper-a4 .page-container {
+  width: 794px;
+  /* (210mm × 3.78) */
+  height: 1123px;
+  /* (297mm × 3.78) */
+  margin: 0 auto;
+}
+
+/* B5 用紙: 182mm x 257mm */
+.paper-b5 .page-container {
+  width: 688px;
+  /* (182mm × 3.78) */
+  height: 972px;
+  /* (257mm × 3.78) */
+  margin: 0 auto;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 10px;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.page-content {
+  display: flex;
+  height: 100%;
+  padding: 57px 57px 57px 57px;
+  /* B4: 15mm × 3.78 ≈ 57px */
+  gap: 38px;
+  /* 10mm × 3.78 ≈ 38px (COLUMN_GAP_MM) */
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* QUESTION_BLOCK_GAP_MM ≈ 30px */
+  overflow: hidden;
+}
+
+.column-left {
+  border-right: 1px solid #e5e7eb;
+  padding-right: 19px;
+}
+
+.column-right {
+  border-left: 1px solid #e5e7eb;
+  padding-left: 19px;
+}
+
+/* プリント時 */
+@media print {
+  .page-container {
+    page-break-after: always;
+    box-shadow: none;
+    margin: 0;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .column-left {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .column-right {
+    border-left: none;
+    padding-left: 0;
+  }
+}
